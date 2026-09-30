@@ -1,0 +1,30 @@
+:root {
+  --color-accent: #268bd2;
+}
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+a {
+  color: var(--color-accent);
+}
+.site-header nav ul {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.site-header .active a {
+  font-weight: bold;
+}
+.posts {
+  padding: 0;
+  list-style: none;
+}
+.post-item time {
+  margin-left: .5rem;
+  color: #767676;
+}

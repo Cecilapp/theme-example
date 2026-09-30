@@ -1,0 +1,21 @@
+{% set pages = site.pages.showable %}
+{% if page.pages is defined %}
+{% set pages = page.pages %}
+{% endif %}
+{% if page.pagination.pages is defined %}
+{% set pages = page.pagination.pages %}
+{% endif %}
+{% extends ['page.html.twig', '_default/page.html.twig'] %}
+
+{% block content %}
+      <h1>{{ page.title }}</h1>
+      {{ page.content }}
+      <ul class="posts">
+      {%- for post in pages %}
+        {%- include 'partials/post-item.html.twig' with {post} only %}
+      {%- else %}
+        <li>{% trans %}No pages.{% endtrans %}</li>
+      {%- endfor %}
+      </ul>
+      {{- include('partials/paginator.html.twig') }}
+{%- endblock content %}

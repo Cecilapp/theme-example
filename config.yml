@@ -1,1 +1,10 @@
-# Website config here.
+# Cecil config required by the theme
+taxonomies:
+  tags: tag
+pages:
+  pagination:
+    max: 5
+    path: page
+# Theme options
+example:
+  color: '' # CSS color (e.g.: `#268bd2`)

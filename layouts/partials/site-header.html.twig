@@ -1,0 +1,10 @@
+<header class="site-header">
+  <a href="{{ url('/') }}" class="site-title">{{ site.title }}</a>
+  <nav>
+    <ul>
+    {%- for entry in site.menus.main|default([])|sort_by_weight %}
+      <li{% if url(entry.url) == url(page) %} class="active"{% endif %}><a href="{{ url(entry.url) }}">{{ entry.name }}</a></li>
+    {%- endfor %}
+    </ul>
+  </nav>
+</header>
