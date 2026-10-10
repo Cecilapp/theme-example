@@ -1,5 +1,5 @@
 <header class="site-header">
-  <a href="{{ url('/') }}" class="site-title">{{ site.title }}</a>
+  <a href="{{ url(site.home) }}" class="site-title">{{ site.title }}</a>
   <nav>
     <ul>
     {%- for entry in site.menus.main|default([])|sort_by_weight %}
