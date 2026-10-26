@@ -5,6 +5,11 @@ pages:
   pagination:
     max: 5
     path: page
+# Theme extensions, registered by the theme plugin
+extensions:
+  plugins:
+    ThemeExample: ThemeExample\Plugin
 # Theme options
 example:
   color: '' # CSS color (e.g.: `#268bd2`)
+  reading_time: true # displays the estimated reading time of pages
